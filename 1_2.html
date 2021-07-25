@@ -1,0 +1,41 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+</script>
+<body>
+<div ng-app="myApp" ng-controller="Ctrl"><center>
+<p>Below are the Previous Lang.</p>
+<h1>{{message}}</h1>
+<h2>{{type}}</h2></center>
+<div ng-controller="C"><center>
+<p>Basic one.</p>
+<h1>{{message}}</h1>
+<h2>{{type}}</h2></center>
+</div><center>
+<div ng-controller="Java">
+<p>Ready to Learn</p>
+<h1>{{message}}</h1>
+<h2>{{type}}</h2></center>
+</div>
+
+</div>
+<script>
+var app=angular.module('myApp',[]);
+app.controller('Ctrl',function($scope){
+$scope.message="Subject";
+$scope.type="Year studied";
+});
+app.controller('C',function($scope){
+$scope.message="C";
+$scope.type="Sem 1-1";
+});
+app.controller('Java',function($scope){
+$scope.message="Java";
+$scope.type="Sem 2-1";
+});
+app.controller('Python',function($scope){
+$scope.message="Python";
+$scope.type="Sem 1-2";
+});</script>
+</body>
+</html>
+
